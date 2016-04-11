@@ -8,6 +8,10 @@ describe DockingStation do
     bike = subject.release_bike
     expect(bike).to be_working
   end
+
+  it "adds a bike to its inventory when a bike is docked" do
+    expect(subject.dock).to eq 'Thanks for returning the bike.'
+  end
 end
 
 #let(:ot) { OrangeTree.new }
